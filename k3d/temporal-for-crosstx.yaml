@@ -1,0 +1,16 @@
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: temporal-for-crosstx
+image: rancher/k3s:v1.30.3-k3s1
+kubeAPI:
+  hostIP: "0.0.0.0"
+  hostPort: "8000"
+servers: 1
+agents: 1
+options:
+  k3d:
+    wait: true
+    timeout: "60s"
+    disableImageVolume: false
+    disableRollback: false
